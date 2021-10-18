@@ -1,0 +1,20 @@
+(awesomewm)
+firefox
+man-db
+xf86-video-intel
+xorg-xbacklight
+git
+pavolume (aur)
+python-pip
+docopt (pip)
+gobject-introspection
+pygobject (pip)
+tmux
+zip, unzip, p7zip, tar
+dmenu (manually to /home/neumnotele/suckless/dmenu)
+mpv
+imagemagick
+picom
+bluez, bluez-util, pulseaudio-bluetooth
+qutebrowser
+youtube-dl

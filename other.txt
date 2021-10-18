@@ -1,0 +1,191 @@
+NetworkManager:
+nmtui is the cli "graphical" tool to connect to Wi-Fi
+
+list timezone:
+timedatectl list-timezone
+
+setting timezone:
+timedatectl set-timezone Europe/Ljubljana
+
+added touchpad config file (/etc/X11/xorg.conf.d/40-touchpad.conf) to enable tap to click and reverse scroll direction
+
+added keyboard config file (/etc/X11/xorg.conf.d/90-caps2escape.conf) to change capslock to escape
+
+added startx call in .bash_profile to automatically start xserver after login
+
+change screen brightness:
+	increase by percent -> xbacklight -inc <percent>
+	decrease by percent -> xbacklight -dec <percent>
+	set to percent -> xbacklighht -set <percent>
+
+added pavolume to path in .bash_profile (export PATH=$PATH:[path here])
+
+added wheel to path in .bash_profile ( ^^ +:/home/neumnotele/.local/bin)
+
+fixed pavolume by adding before importing Notify:
+import gi
+gi.require_version('Notify', '0.7')]
+
+change sound volume:
+	show volume and mute status -> pavolume show
+	increase (by 10%) -> pavolume volup
+	to go over 100% user --nolimit (pavolume volup --nolimit)
+	decrease (by 10%) -> pavolume voldown
+	set to percent -> pavolume volset <percent> (can to over 100%)
+	mute -> pavolume muteon
+	unmute -> pavolume muteoff
+	mute toggle -> pavolume mutetoggle
+
+diabled PC speaker by blacklisting it in /etc/modprobe.c/disable_pc_speaker.conf
+
+made startx call in .bash_profile more robust (to not trigger on tmux start)
+
+updated mirrolist in /etc/pacman.d/mirrorlist to include all slovenian, austrian, croatian, hungarian and italian servers
+
+nemo graphical file manager is already installed (arch guided installer ??) so i will try to use this when i need graphical file manager
+
+feh and image viewer (gpicview) are already installed (arch guided installer ??)  but we need something better than feh (sxiv)
+i will use feh for for background setting and keep gpicview for now (may remove later)
+
+sIDEnOTE: notify-send is cool thing to sent notifications to top-right of screen (for something like changing volume or screen brithness or other)
+
+created .xinitrc (cp /etc/X11/xinit/xinitrc ~/.xinitrc)
+
+disabled screen turning off and screen saver (black screen) after 10 minutes in ~/.xinitrc
+xset -dpms
+xset s off
+
+installed zip, unzip, p7zip and tar archiving and compression utils
+zip:
+	zip <archive-name.zip> file1 file2 (archive name is optional)
+	zip <archive-name.zip> -r directory1 directory2 file1 file2 (can include directories using recursive flag)
+unzip:
+	unzip archive-name.zip -d [path-to-dir]
+7zip:
+	7z a <archive-name> fiel1 file2
+	7z e archive-name -o[path-to-dir] (no space between -o and path)
+tar:
+	tar  -xvzf archive-name -C [path-to-dir]
+		x -> extract
+		v -> verbose output
+		z -> type is gzipped file (.tar.gz)
+		f -> file specified
+		C -> to path (dir must already exist)
+
+manually installed dmenu to /home/neumnotele/suckless/dmenu
+
+added dmenu to path in .bash_profile
+
+increased dmenu font to 12 by editing config.h file in dmenu dir and running "sudo make install"
+
+installed mpv
+
+created rc.lua awesome config in ~/.config/awesome/
+
+disabled sloppy focus in awesomewm by commenting it out in rc.lua
+
+[added setting random background in rc.lua] (changed)
+
+[added 2px window gaps in rc.lua] (changed)
+
+made floating layout be at the end of the list (thus making tile the new default)
+
+installed imagemagick package (for random background wip)
+
+added generating random wallpaper.png in .bash_profile that is used as background by awesome wm
+
+created awesome theme dir in .config/awesome/ (copy of default theme)
+
+changed so that awesome custom theme uses ~/Images/wallpaper.png as background
+
+moved windows gaps setting from ~/.config/awesome/rc.lua to ~/.config/awesome/themes/default/theme.lua for awesome wm
+
+installed picom (composer) (transparency and screen tearing) (but not yet autostarted (picom -b))
+
+created picom config file in ~/.config/picom/picom.conf
+
+added picom to awesome wm autostart (in rc.lua) but not yet enabled (commented out)
+
+added audio key bindings to rc.lua
+
+added brightness key bindings to rc.lua
+
+added placeholders for other fn+ combos (fn+f4 (mic) and fn+f8 (wifi) dont work and lock is bound to mod+l)
+
+installed bluez and bluez-utils
+
+enabled bluetooth.service (systemctl enable bluetooth.service)
+
+installed pulseaudio-bluetooth
+
+bluetoothctl connecting:
+bluetoothctl
+power on
+scan on
+(see devices)
+pair [device MAC] (tab-completion)
+trust [device MAC]
+connect [device MAC]
+(if something go wrong try remove [device MAC] and try again or go to arch wiki / google)
+scan off
+exit (to exit utility (this does not close connection))
+
+bluetoothctl disconnect:
+bluetoothctl
+disconnect
+power off
+exit / quit (dont know what is the difference)
+
+made media keys (in rc.lua) use pactl instead of pavolume for sound volume
+
+made custom key binds in rc.lua use awful.spawn.with_shell() instead of awful.util.spawn()
+
+second monitor connectiong
+to see all available monitors and resolutions:
+	xrandr
+
+to enable HDMI1 display to 1920x1080 resolution (--set audio force-dvi is ad-hoc fix for overscan (maybe it works without)
+	xrandr --output "HDMI1" --set audio force-dvi --mode 1920x1080
+
+to make second display (HDMI1) mirror main display (eDP1):
+	xrandr --output "eDP1" --auto --output "HDMI1" --same-as "eDP1"
+
+to place second display (HDMI1) above main display (eDP1) (--below, --left-off, --right-of also available):
+	xrandr --output "eDP1" --auto --output "HDMI1" --above "eDP1"
+
+to disconnect second display (we re-enable main display just to be sure):
+	xrandr --output "HDMI1" --off --output "eDP1" --auto
+
+other options like rotate and position are available (man xrandr)
+
+improved audio key bindings in rc.lua (using @DEFAULT_SINK@ in pactl command)
+
+copying and pasting from and to termina:
+copy from terminal using mouse selected text:
+	ctrl + shift + c
+paste to terminal (also works in nvim normal mode):
+	ctrl + shift + c
+copy from vim using visual selection:
+	"+y (saves yank to + register (which is system clipboard))
+paste to vim:
+	"+y (pastes from + register (which is system clipboard))
+
+added dmenu_run and firefox bindings to magnifying glass and world buttons
+
+mounting drives (drive or usb (not sure about cd/dvd)):
+list drives connected:
+	sudo fdisk -l 
+	or lsblk
+
+mount drive:
+	udisksctl mount -b <drive-name> (/dev/sdb1)
+
+unmount drive:
+	udisksctl unmount -b <drive-name> (/dev/sdb1)
+
+installed qutebrowse
+
+installedd youtube-dl
+
+create github repo from cli:
+	curl -u "USERNAME" https://api.github.com/user/repos -d '{"name":"REPONAME"}' (will be asked for personal auth token)

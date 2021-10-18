@@ -1,0 +1,11 @@
+awesome
+
+alacritty
+
+tmux
+
+nvim
+
+dmenu
+
+picom

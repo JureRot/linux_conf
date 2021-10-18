@@ -1,0 +1,64 @@
+	awesomewm
+awesomewm config (bg and much, much more) (arch linux wiki Awesome)
+	update and expand mirrorlist
+	copy and paste to and from terminal (ctrl+shift+c/v, from vim use "+y to coppy from and "+p to paste to
+	dmenu
+dmenu config
+	nvim
+nvim config (new and custom)
+	tmux
+tmux config
+	alacritty
+alacritty config
+bash config (.bashrc, .bash_profile) (aliases and such)
+	git
+	firefox
+	quitebrowser
+(brave)
+	rebind capslock to escape (as before or find another way)
+	autostart graphic environment (startx)
+(blue light filter for night (redshift))
+cli file manager
+	graphical file manager (for drag-dropping into websites) (maybe uninstall nemo and install something smaller/lighter)
+fuzzy finder (fzf, silve searcher/surfer, lf?)
+	zip, unzip, 7zip (p7zip), tar, ((gzip, rar))
+	sound settings (volume, mixer, source, output)
+	sound volume adjustment with function keys
+sound volume display (widget / toolbar)
+	screen brightness settings
+	screen brightnes adjustment with function keys
+screen brightness display (widget / toolbar)
+	bluetooth (bluez + bluez-utils (for bluetoothctl))
+	mpv
+	youtube-dl
+(office suite (libreoffice))
+(image editing (gimp, inkscape)
+music player (foobar2000-like)
+image viewing (feh and gpicview are pre-installed, but we need sxiv)
+	touchpad reverse scroll direction
+	touchpad enable tap clicking
+	terminal/bash prompt line shorten (started but buggy(probably have just username and location)) (arch wiki Bash/Prompt customization)
+dropdown terminal (probably part of awesome config (to toggle creating alacritty window on top half of the screen (with transparency) (screen rules))
+install fonts
+	power settings (display off, sleep, lid close) (partially)
+settings in general (battery, network, task manager, ...) (maybe done with dmenu scripting)
+widgets in bar to see status of some stuff (battery, volume, (brightness), bluetooth, internet / wifi, date, time, (lang), memory, temperature, weather, ...)
+	mounting / unmounting drives (udisks)
+	mounting / unmounting USB-s
+	mounting / unmounting cds and dvds (probably, havent tested)
+	io connections (second display, projector)
+	compositor (picom)
+picom config
+	16bit wallpapers (theme to reflect this ??) (instead of having 4096 images, every login generate new random one an overwirte the old so we have just one)
+	change to use pactl instead of pavolume (`pactl set-sink-volume $(pctl get-default-sink) +10%` instead of `pavolume -inc 10%`) [thus it will work with bluetooth speakers as well]
+need to remove / delete pavolume (we use pactl directly so we dont need it) (AFTER WE HAVE WIDGET)
+try to change the "lock" key from mod+l to XF86Lock or something
+create dmenu script for second display (show all connected->choose reoslution->choose mode (mirror, extend), disconnect option)
+get battery status and such (reading from /sys/class/power_supply/BAT0/ or upower or something else (wiki power management))
+create dmenu script for mounting drives (get all drives not sda and partitions if have any and give option to mount and unmount)
+automount drives (udiskie or custom script or fstab)
+add git status to terminal/bash prompt (try without plugins/packages) (red/orane if behind, normal if git repo, blue if ahead, green if ahead and commited)
+how to connect to git using ssh
+how to cache personal authenication token for github
+how to create git repo using command line (do i need gh (github cli) or hub untility on top of git) (or maybe use curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO", "private":"true"}') [https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br] (curl method works so: init, curl, remote add origin <url>,(add, commit), push -u origin master) [https://gist.github.com/alexpchin/dc91e723d4db5018fef8]
+torrent clinet
