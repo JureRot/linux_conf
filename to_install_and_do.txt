@@ -38,7 +38,7 @@ image viewing (feh and gpicview are pre-installed, but we need sxiv)
 	touchpad reverse scroll direction
 	touchpad enable tap clicking
 	terminal/bash prompt line shorten (started but buggy(probably have just username and location)) (arch wiki Bash/Prompt customization)
-dropdown terminal (probably part of awesome config (to toggle creating alacritty window on top half of the screen (with transparency) (screen rules))
+dropdown terminal (probably part of awesome config (to toggle creating alacritty window on top half of the screen (with transparency) (screen rules)) (and scratchpad) [https://github.com/notnew/awesome-scratch]
 install fonts
 	power settings (display off, sleep, lid close) (partially)
 settings in general (battery, network, task manager, ...) (maybe done with dmenu scripting)
@@ -57,8 +57,10 @@ create dmenu script for second display (show all connected->choose reoslution->c
 get battery status and such (reading from /sys/class/power_supply/BAT0/ or upower or something else (wiki power management))
 create dmenu script for mounting drives (get all drives not sda and partitions if have any and give option to mount and unmount)
 automount drives (udiskie or custom script or fstab)
-add git status to terminal/bash prompt (try without plugins/packages) (red/orane if behind, normal if git repo, blue if ahead, green if ahead and commited)
+add git status to terminal/bash prompt (try without plugins/packages) (name of branch -> red/orange if behind, normal if git repo, blue if ahead, green if ahead and commited) [https://coderwall.com/p/pn8f0g/show-your-git-status-and-branch-in-color-at-the-command-prompt][https://gist.github.com/justintv/168835] [https://gist.github.com/sundeepgupta/b099c31ee2cc1eb31b6d]
 how to connect to git using ssh
 how to cache personal authenication token for github
-how to create git repo using command line (do i need gh (github cli) or hub untility on top of git) (or maybe use curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO", "private":"true"}') [https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br] (curl method works so: init, curl, remote add origin <url>,(add, commit), push -u origin master) [https://gist.github.com/alexpchin/dc91e723d4db5018fef8]
+	how to create git repo using command line (do i need gh (github cli) or hub untility on top of git) (or maybe use curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO", "private":"true"}') [https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br] (curl method works so: init, curl, remote add origin <url>,(add, commit), push -u origin master) [https://gist.github.com/alexpchin/dc91e723d4db5018fef8]
 torrent clinet
+obsidian (conceptual note taking program)
+print screen utility
