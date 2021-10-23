@@ -6,6 +6,7 @@ WHITE="\033[37m" #up to date
 YELLOW="\033[33m" #changes
 MAGENTA="\033[35m" #staged (added)
 GREEN="\033[32m" #ahead (commited)
+COLOR_RESET="\033[0m"
 
 function git_color {
 	local git_status="$(git status 2> /dev/null)"
@@ -21,17 +22,17 @@ function git_color {
 
 	if [[ -n $branch ]]; then #alternative (check if string len not zero)
 		if [[ -n $diverged ]]; then #diverged
-			echo -e $CYAN_BOLD
+			echo -e "($CYAN_BOLD"
 		elif [[ -n $behind ]]; then #behind
-			echo -e $RED_BOLD
+			echo -e "($RED_BOLD"
 		elif [[ -n $ahead ]]; then #ahead
-			echo -e $GREEN
+			echo -e "($GREEN"
 		elif [[ -n $staged ]]; then #staged
-			echo -e $MAGENTA
+			echo -e "($MAGENTA"
 		elif [[ -n $not_staged ]] || [[ -n $untracked_files ]]; then #changes
-			echo -e $YELLOW
+			echo -e "($YELLOW"
 		else #up to date
-			echo -e $WHITE
+			echo -e "($WHITE"
 		fi
 	fi
 }
@@ -40,7 +41,15 @@ function git_branch {
 	local git_status="$(git status 2> /dev/null)"
 	local branch=$(grep "On branch" <<< $git_status)
 	if [[ -n $branch ]]; then #alternative (check if string len not zero)
-		echo "($(echo $branch | cut -d " " -f 3))"
+		echo $(echo $branch | cut -d " " -f 3)
+	fi
+}
+
+function git_reset {
+	local git_status="$(git status 2> /dev/null)"
+	local branch=$(grep "On branch" <<< $git_status)
+	if [[ -n $branch ]]; then #alternative (check if string len not zero)
+		echo -e "$COLOR_RESET)"
 	fi
 }
 
