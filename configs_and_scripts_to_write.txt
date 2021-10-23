@@ -1,11 +1,12 @@
-awesome
+AWESOME:
+remove window top bars for non-floating windows
 
-alacritty
+ALACRITTY:
 
-tmux
+TMUX:
 
-nvim
+NVIM:
 
-dmenu
+DMENU:
 
-picom
+PICOM:

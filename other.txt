@@ -189,3 +189,17 @@ installedd youtube-dl
 
 create github repo from cli:
 	curl -u "USERNAME" https://api.github.com/user/repos -d '{"name":"REPONAME"}' (will be asked for personal auth token)
+
+init local dir as a repo and connect it to existing repo:
+	git init
+	git add README.md (or *) [as normal]
+	git commit -m "message" [as normal]
+	(git branch -M BRANCHNAME (default is master))
+	git remote add origin https://github.com/USERNAME/REPONAME.git
+	git push -u origin master BRANCHNAME
+
+user xbindkeys to getting key codes
+
+created prompt_git_status.sh file in $HOME/.config/bash/ that contains functions for adding colored git prompt
+
+sourced promtp_git_status.sh to .bashrc
