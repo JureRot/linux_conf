@@ -17,7 +17,7 @@ function git_color {
 	local up_to_date=$(grep "Your branch is up to date" <<< $git_status)
 	local not_staged=$(grep "Changes not staged for commit:" <<< $git_status)
 	local untracked_files=$(grep "Untracked files:" <<< $git_status)
-	local staged=$(grep "Changes to be commited:" <<< $git_status)
+	local staged=$(grep "Changes to be committed:" <<< $git_status)
 	local ahead=$(grep "Your branch is ahead of" <<< $git_status)
 
 	if [[ -n $branch ]]; then #alternative (check if string len not zero)
