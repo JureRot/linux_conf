@@ -198,8 +198,54 @@ init local dir as a repo and connect it to existing repo:
 	git remote add origin https://github.com/USERNAME/REPONAME.git
 	git push -u origin master BRANCHNAME
 
-user xbindkeys to getting key codes
+use xbindkeys to getting key codes
 
 created prompt_git_status.sh file in $HOME/.config/bash/ that contains functions for adding colored git prompt
 
 sourced promtp_git_status.sh to .bashrc
+
+use mod + m1 (left clikc) to move floating window in awesome wm
+
+use mod + m2 (right clikc) to resize floating window in awesome wm
+
+made picom start with awesomewm
+
+removed titlebars from windows in awesomewm rc.lua
+
+added titlebars for floating windws in awesomewm rc.lua (doesnt work for floating layout, just floating windows)
+
+added keyboard shortcuts for taking screenshots with import utility of ImageMagick to rc.lua
+
+installed lf file manager from aur
+
+made awesomewm borders 2px (in theme.lua)
+
+made mod+e and dir button open new window runnin lf cli file manager
+
+made shift+dir button open nemo gui file manager
+
+installed nodejs
+
+made shift + web button open qutebrowser
+
+installed r
+
+created custom aweseomewm windows rules for windows with class dropdown_terminal that doesn't show it in the taskbar, makes it floating and sizes and positions it (in rc.lua)
+
+created custom aweseomewm windows rules for windows with class node_calculator that doesn't show it in the taskbar, makes it floating and sizes and positions it (in rc.lua)
+
+added picom transparency rules for windows of class dropdown_terminal and node_calculator (so they are transparent even when focused) (in picom.conf)
+
+added new custom awesomewm tag with name hidden (in rc.lua)
+
+made tag with name hidden not show in awesomewm taglist widget by changing taglist filter(in rc.lua)
+
+made f12 toggle dropdown_terminal:
+create dropdown_terminal if it doesn't exit
+move dropdown_terminal to  current tag and focus it if it exists but not already focused on current tag
+move dropdown_temrinal to hidden tag if currently focused
+
+made calc button toggle node_calculator:
+create node_calculator if it doesn't exit
+move node_calculator to  current tag and focus it if it exists but not already focused on current tag
+move node_calculator to hidden tag if currently focused

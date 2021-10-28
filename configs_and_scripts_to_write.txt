@@ -1,12 +1,30 @@
 AWESOME:
-remove window top bars for non-floating windows
+	remove window top bars for windows
+	make floating windows have top bar (for easy moving)
+make menubar tabs not take full width [https://www.google.com/search?hl=en&q=awesome%20wm%20tasklist%20item%20widht]
+	dropdown menu and calculator (skratchpad style)
 
 ALACRITTY:
+colors (one plus dark)
+fonts
 
 TMUX:
 
 NVIM:
+basic config
+coloscheme (gruvbox dark)
+statusbar
+lsp
 
 DMENU:
 
 PICOM:
+	focussed window full opacity
+	non-focussed windows slight transparency (just enought its noticable which is focussed)
+	disable everything else (for best performance) (tbd: maybe something looks good)
+
+LF:
+open with default app/utility
+previews
+custom commands (create, delete, rename, move, copy, bulk rename, ...)
+open in this terminal window (instead of opening a new one)
