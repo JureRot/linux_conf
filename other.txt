@@ -1,5 +1,6 @@
 NetworkManager:
 nmtui is the cli "graphical" tool to connect to Wi-Fi
+(take not of Fn+F8 to disable wifi)
 
 list timezone:
 timedatectl list-timezone
@@ -151,7 +152,7 @@ to make second display (HDMI1) mirror main display (eDP1):
 	xrandr --output "eDP1" --auto --output "HDMI1" --same-as "eDP1"
 
 to place second display (HDMI1) above main display (eDP1) (--below, --left-off, --right-of also available):
-	xrandr --output "eDP1" --auto --output "HDMI1" --above "eDP1"
+	xrandr --output "eDP1" --primary --auto --output "HDMI1" --above "eDP1"
 
 to disconnect second display (we re-enable main display just to be sure):
 	xrandr --output "HDMI1" --off --output "eDP1" --auto
@@ -198,7 +199,7 @@ init local dir as a repo and connect it to existing repo:
 	git remote add origin https://github.com/USERNAME/REPONAME.git
 	git push -u origin master BRANCHNAME
 
-use xbindkeys to getting key codes
+use xbindkeys --key to getting key codes
 
 created prompt_git_status.sh file in $HOME/.config/bash/ that contains functions for adding colored git prompt
 
@@ -249,3 +250,71 @@ made calc button toggle node_calculator:
 create node_calculator if it doesn't exit
 move node_calculator to  current tag and focus it if it exists but not already focused on current tag
 move node_calculator to hidden tag if currently focused
+
+made tasklist widgets have max size in rc.lua
+
+changed clock widget format
+
+removed keyborad layout widget
+
+{ deprecated: using transmission
+downloaded rtorrent torrent client
+copied basic config into ~/.rtorrent.rc
+created sessions dir ~/.rtorrent.session
+.torrent files saved in ~/Downloads start automatically downloading when rtorrent is open
+to download magnetic links, you need to copy magnetic link address and than in rtorrent press 'backspace' and paste the link
+}
+
+installed redshift
+added redshift call to awesome wm autostart
+
+installed transmission-cli torrent client
+start transmission with transmission-daemon -w ~/torrents [-c ~/Downloads]
+stop transmission with transmission-remote --exit
+use web ui with http://localhost:9091
+you can also use cli ui with transmission-remote comman (but i dont know how exactly)
+
+disabled mouse acceleration and sensitivity by creating 50-mouse-acceleration.conf file in /etc/X11/xorg.conf.d/
+
+made dropdown terminal show only on primary screen (changes in rc.lua)
+
+added some ls, cd, mv and rm aliases to .bashrc
+
+changed mouse acceleration config (50-mouse-acceleration.conf) and added config for trackpoint (60-trackpoint.conf)
+
+installed ntfs-3g to mount ntfs drives
+
+installed virtual box, vagrant, code (code-oss), and mysql-workbench
+
+added range to networs.conf in /etc/vbox/ to make foora.si work locally
+
+installed gnome-keyring (for mysql-workbench)
+
+installed adobe-source-han-serif-otc-fonts and adobe-source-han-sans-otc-fonts fonts for chinese, japanese and korean symbols
+
+installed acpi (for easy battery status ouput)
+
+for steam:
+enabled multilb repos for pacman [https://wiki.archlinux.org/title/Official_repositories#multilib]
+installed lib32-mesa (32bit openGL multilib driver for intel)
+(en_US.UTF-8 locale was already generated)
+installed ttf-liberation fonts (not optimal)
+(installed wqy-zenhei for asian characters (and uninstalled because it fucked up terminal fonts))
+installed lib32-systemd
+installed steam
+
+installed brawlhalla on steam
+
+installed custom proton (proton-ge) in ~/.steam/root/compatibilitytools.d/
+
+installed wine and lib32-libpulse
+
+installed lutris
+
+uninstalled PyGObject pip package (pip uninstall PyGObject) (to fix lutris)
+
+installed epic games store
+
+added keyboard shortcuts for dmenu search (alt+space), volume (mod+š, mod+ć, mod+shift+ć) and brightness (mod+đ, mod+ž) to awesome wm config to be special keys indendent
+
+installed php storm (aur)

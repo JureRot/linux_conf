@@ -17,7 +17,7 @@ bash config (.bashrc, .bash_profile) (aliases and such)
 (brave)
 	rebind capslock to escape (as before or find another way)
 	autostart graphic environment (startx)
-(blue light filter for night (redshift))
+	(blue light filter for night (redshift))
 	cli file manager (lf)
 lf config
 	graphical file manager (for drag-dropping into websites) (maybe uninstall nemo and install something smaller/lighter)
@@ -32,15 +32,15 @@ screen brightness display (widget / toolbar)
 	bluetooth (bluez + bluez-utils (for bluetoothctl))
 	mpv
 	youtube-dl
-(office suite (libreoffice))
+	(office suite (libreoffice))
 (image editing (gimp, inkscape)
-music player (foobar2000-like)
+(music player (foobar2000-like))
 image viewing (feh and gpicview are pre-installed, but we need sxiv)
 	touchpad reverse scroll direction
 	touchpad enable tap clicking
 	terminal/bash prompt line shorten (started but buggy(probably have just username and location)) (arch wiki Bash/Prompt customization)
 	dropdown terminal (probably part of awesome config (to toggle creating alacritty window on top half of the screen (with transparency) (screen rules)) (and scratchpad) [https://github.com/notnew/awesome-scratch] {new idea: if not exist -> create floating window; if exists but hidden -> show; if exists and not hidden -> hide it}
-install fonts
+install fonts (symbols and emojis, programming fonts (part of alacrity config))
 power settings (display off, sleep, lid close) (partially)
 settings in general (battery, network, task manager, ...) (maybe done with dmenu scripting)
 widgets in bar to see status of some stuff (battery, volume, (brightness), bluetooth, internet / wifi, date, time, (lang), memory, temperature, weather, ...)
@@ -62,7 +62,7 @@ automount drives (udiskie or custom script or fstab)
 how to connect to git using ssh
 how to cache personal authenication token for github
 	how to create git repo using command line (do i need gh (github cli) or hub untility on top of git) (or maybe use curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO", "private":"true"}') [https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br] (curl method works so: init, curl, remote add origin <url>,(add, commit), push -u origin master) [https://gist.github.com/alexpchin/dc91e723d4db5018fef8]
-torrent clinet
+	torrent clinet (rtorrent cli client, transmission seems better)
 obsidian (conceptual note taking program)
 	print screen utility (use import (part if ImageMagick) (write dmenu script and shortcut for fullscreen and region)
 make readmes with default locations of configs (picom, awesome, alacritty, ...) (in progress)
@@ -75,5 +75,27 @@ create dmenu script (or keyboard shurtcut) to generate new random (or grey) back
 	create keybinding to open lf window with mod + e and dir button (and shif + dir to open nemo gui file manager)
 add description and group to custom keybindings (so they are visible when mod + s)
 clean rc.lua (delete unneeded comments, add new comments for clarity)
-some config ideas [https://www.youtube.com/watch?v=P7Jd0iNSCQA]
-make mv and rm commands interactive (alias mv='mv -i' in .bashrc)
+	make mv and rm commands interactive (alias mv='mv -i' in .bashrc) some config ideas [https://www.youtube.com/watch?v=P7Jd0iNSCQA]
+install pandoc
+install ebook-converter (or some util to convert .pdf or .epub -> .mobi) (calibre)
+copy config files mentioned in other.txt into linux_conf git directory as well as ~/scripts directory
+	make dropdown terminal full width of current display not just of main display (looks weird on second display) (maybe with screen rules, maybe resize on recall, maybe separate for each screen, or always swap to primary screen) (check if screen is primary, else -> awful.scren.focus_relative( 1)) (same problem with dmenu) {made so its always diplayed on primary screen}
+	disable mouse acceleration and setup mouse speed (as close to windows 6/11) (sensitivity is subject to change) (device specific to not interfere with trackpoint)
+	install ex-job necessary programs (virtual box, vagrant, vs code, mysqlworkbench)
+install android studio
+install job necessary programs (~~phpstorm~~, mattermost)
+	install games (steam, wine, lutris, ...)
+general problems regarding multiple monitors (multihead on arch wiki) (dmenu not working on both screens, maybe need to init it on both idk)
+add bash defaults (exports for editor and browser and such) (connected with lf config)
+learn awk to use in scripts for widgets (yt tutorials)
+switch to github alternative (gitlab or bitbucket) (maybe put in an effort to learn github before switching)
+	make mouse accelration global and than overwrite for trackapt (thus all mice should work) (also test with wacom)
+install ctags (universal ctags)
+create markdown setup (note taking and such)
+simplehttp (or similar) to share files / dirs over local network between devices)
+install latex and working environment
+maybe make menubar of inactive window different (to distinguis which windows is active) (could fall under theming)
+	how to connect and test conntroller (seems to work by itself)
+install necessary games (probably undemanding ones (fgc: bh, roa, sg, KI?; fps: CSGO, QC/QL, TF2, dd; other: lol, rotmg, single player games (epic and battle.net)) [https://old.reddit.com/r/leagueoflinux/comments/jmo1m6/megathread_install_methods_anticheat_problemsbugs/][https://old.reddit.com/r/leagueoflinux/comments/j0o2qo/new_lutris_installer_with_launch_helper/] {this may be a waste of time on this machine}
+create shortcuts (awesomewm) for normal keyboard combiantions (not special search and volume keys) (goes for volume, brightness, search, calc, and program shortcuts)
+custom and multiple keyboard layouts (slomak)

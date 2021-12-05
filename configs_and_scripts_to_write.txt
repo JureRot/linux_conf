@@ -1,8 +1,9 @@
 AWESOME:
 	remove window top bars for windows
 	make floating windows have top bar (for easy moving)
-make menubar tabs not take full width [https://www.google.com/search?hl=en&q=awesome%20wm%20tasklist%20item%20widht]
+	make menubar tabs not take full width [https://www.google.com/search?hl=en&q=awesome%20wm%20tasklist%20item%20widht]
 	dropdown menu and calculator (skratchpad style)
+create widgets (brightness, volume, battery, memory, connection (wifi), calendar, ...) [https://stackoverflow.com/questions/62251245/awesomewm-update-watch-widget-on-keypress] [https://www.reddit.com/r/awesomewm/comments/fk37lr/auto_updating_widget_every_x_seconds_but_without/]
 
 ALACRITTY:
 colors (one plus dark)
@@ -17,6 +18,11 @@ statusbar
 lsp
 
 DMENU:
+mounting disks
+connecting displays
+connecting to bluetooth device (if possible without going into bt environment)
+settings masterscript
+
 
 PICOM:
 	focussed window full opacity
@@ -28,3 +34,4 @@ open with default app/utility
 previews
 custom commands (create, delete, rename, move, copy, bulk rename, ...)
 open in this terminal window (instead of opening a new one)
+open in windows independent of this (e.g. open in mpv but if you close this windows mpv doesnt close)

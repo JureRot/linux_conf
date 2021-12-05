@@ -21,3 +21,23 @@ youtube-dl
 lf (aur)
 nodejs
 r
+redshift
+transmission-cli
+ntfs-3g
+virtualbox
+vagrant
+code
+mysql-workbench
+gnome-keyring
+adobe-source-han-serif-otc-fonts
+adobe-source-han-sans-otc-fonts
+acpi (battery output)
+lib32-mesa
+ttf-liberation (font)
+lib32-systemd
+steam
+wine
+lib32-libpulse
+lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
+lutris
+phpstorm (aur)
